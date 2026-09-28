@@ -10,7 +10,6 @@ Coding standards and behavioral guidelines live in
 Spotify analytics platform: a data engineering learning project that tracks
 artists, albums, playlists and listening trends using Spotify data (API
 ingestion, incremental loading, star schema data warehouse, dashboard).
-Part of an application portfolio for data roles.
 
 ## Work plan
 
