@@ -4,7 +4,7 @@ Living handover document for the autonomous session chain
 (see CLAUDE.md, section "Autonomous session protocol").
 Update after every completed unit of work and before every handover.
 
-**Last updated:** 2026-09-28 (setup session — protocol files only)
+**Last updated:** 2026-09-28 (setup session — README revised after idea review)
 **Chain status:** not started (kickoff pending, see below)
 
 ## Kickoff checklist (to be done by the user or a setup session)
@@ -19,7 +19,12 @@ start:
 3. Create the fallback routine (claude-code-remote `create_trigger`,
    cron `0 6,18 * * *`, `create_new_session_on_fire: true`) with the
    fallback prompt from CLAUDE.md, section "Prompt templates".
-4. Start the first worker session with the "Reviewer → worker" template
+4. Record real Spotify API responses once locally (recently played, top
+   artists/tracks, own playlists, one artist, one album) and commit them
+   without tokens as test fixtures under `tests/fixtures/`. Cloud sessions
+   have neither the Spotify credentials nor a browser for the OAuth login,
+   so workers develop and test against these fixtures.
+5. Start the first worker session with the "Reviewer → worker" template
    for the first issue.
 
 ## Work plan
